@@ -1,0 +1,23 @@
+<div style="padding: 20px;">
+  <h2>Aufgaben Warteliste</h2>
+
+  <div style="" >
+    Aktueller Status: {{ tasks.length }} Aufgaben
+  </div>
+
+  <ul>
+    <li *ngFor="let task of tasks" style="margin: 20px ;">
+      <div>
+        <strong>{{ task.title }}</strong>
+        <span>– Status: {{ task.status }}</span>
+        <span>– Dauer: {{ task.Dauer }}</span>
+      </div>
+
+      <select [value]="task.status" (change)="statusChange($event, task)">
+        <option value="Offen">Offen</option>
+        <option value="In Bearbeitung">In Bearbeitung</option>
+        <option value="Fertig">Fertig</option>
+      </select>
+    </li>
+  </ul>
+</div>

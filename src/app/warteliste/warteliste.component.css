@@ -1,0 +1,8 @@
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+select {
+  margin-top: 5px;
+}
